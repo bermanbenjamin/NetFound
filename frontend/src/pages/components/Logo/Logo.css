@@ -1,0 +1,11 @@
+img {
+  margin: 4vw 4vw 0 0;
+  width: 50vw;
+}
+
+@media (max-width: 768px) {
+  img {
+    width: 70%;
+    padding-top: 10vh;
+  }
+}

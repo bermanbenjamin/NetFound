@@ -10,11 +10,6 @@ main {
   align-items: center;
 }
 
-img {
-  margin: 4vw 4vw 0 0;
-  width: 50vw;
-}
-
 h1 {
   font-size: 4vw;
   width: 65vw;
@@ -55,10 +50,6 @@ span {
 }
 
 @media (max-width: 768px) {
-  img {
-    width: 70%;
-    padding-top: 10vh;
-  }
   .content {
     height: 100%;
   }
