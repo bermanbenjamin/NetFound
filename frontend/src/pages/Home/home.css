@@ -1,57 +1,86 @@
 #page-background {
-    width: 100vw;
-    height: 100vh;
-    background: url(../../assets/background.svg) no-repeat;
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(../../assets/background.svg) no-repeat;
 }
 
-#page-background .content img {
-    padding-top: 40px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#page-background .content main {
+img {
+  margin: 4vw 4vw 0 0;
+  width: 50vw;
+}
+
+h1 {
+  font-size: 4vw;
+  width: 65vw;
+}
+
+span {
+  padding-top: 3vh;
+  font-size: 2vw;
+  font-weight: 300;
+  width: 40vw;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.enter-app {
+  margin-top: 14vh;
+  width: 20vw;
+  height: 8vh;
+  background: #f0111f;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter-app .text-button span {
+  text-align: center;
+  font-size: 1.6vw;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  img {
+    width: 70%;
+    padding-top: 10vh;
+  }
+  .content {
+    height: 100%;
+  }
+  .enter-app {
     position: absolute;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 1200px;
-}
-
-#page-background .content main h1 {
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 79px;
-}
-
-#page-background .content main span {
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 55px;
+    left: 0;
+    bottom: 0;
+    margin-top: 30vh;
+    height: 10vh;
+    width: 100%;
+    border-radius: 0;
+  }
+  h1 {
     text-align: center;
-}
-
-.content .enter-app {
-    position: absolute;
-    width: 400px;
-    height: 75px;
-    background: #F0111F;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 150px;
-    transition: background-color 0.2s;
-}
-
-.enter-app .text-button .content .enter-app .text-button {
-    text-align: center;
-    font-size: 48px;
-    line-height: 59px;
-    font-weight: 700;
-    color: #FFF;
-    text-decoration: none;
-}
-
-.home-content .enter-app:hover {
-    background: #f33d4a;
+    padding-top: 10vh;
+    font-size: 7vw;
+  }
+  span {
+    font-size: 4vw;
+    width: 80%;
+  }
+  .enter-app .text-button span {
+    font-size: 5vw;
+  }
 }
