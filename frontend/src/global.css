@@ -1,14 +1,29 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box
 }
 
 body {
-    color: #ffffff;
-    background: #ebf2f5;
+  width: 100vw;  
+  height: 100vh;
+  color: #ffffff;
+  background: #ebf2f5;
 }
 
-body, input, button, textarea {
-    font: 600 18px Roboto, sans-serif;
+body,
+input,
+button,
+textarea, a {
+  font: 600 1vw Roboto, sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --color-text: black;
+  --color-background: lightgray;
 }
