@@ -1,0 +1,14 @@
+#page-background {
+    width: 100vw;
+    height: 100vh;
+    background: url(../../assets/background.svg) no-repeat;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    height: 698px;
+    width: 532px;
+    background: rgba(0, 0, 0, 0.6);
+}

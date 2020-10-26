@@ -18,11 +18,11 @@ function Home() {
                     <span>Ache as melhores programações pro estilo que combina com você!</span>
 
 
-                    <Link to="#" className="enter-app">
+                    <Link to="/login" className="enter-app">
                         <div className="text-button">
                             <span>VAMOS LÁ</span>
                         </div>
-                        
+
                         <div className="icon">
                             <FiChevronRight size={40} color="#ffffff" />
                         </div>

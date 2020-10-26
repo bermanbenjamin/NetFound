@@ -43,9 +43,7 @@
     transition: background-color 0.2s;
 }
 
-.enter-app .text-button
-
-.content .enter-app .text-button {
+.enter-app .text-button .content .enter-app .text-button {
     text-align: center;
     font-size: 48px;
     line-height: 59px;
