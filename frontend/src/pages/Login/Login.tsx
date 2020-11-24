@@ -1,31 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import logoLogin from '../../assets/logo-home.svg';
+import Logo from '../components/Logo/Logo';
 
 
 function Login() {
     return (
-
         <div id="page-background">
-            <img src={logoLogin} alt="Login" />
 
-            <div className="content">
-                <main>
+            <main>
+                <Logo />
+
+                <form action="" className="insert-login-form">
                     <h1>Entrar</h1>
-                    <form action="">
-                        <button>Email</button>
-                        <button>Senha</button>
-                    </form>
 
-                    <Link to ="" className="btn-login">Entrar</Link>
-                    <span>Esqueceu sua Senha?</span>
+                    <div className="input-block">
+                        <label htmlFor="email">Email</label>
+                        <input type="text" name="email" className="insert-email" />
+                    </div>
 
-                    <span>Ainda não nos conhece?</span>
-                    <span>CLIQUE AQUI e registre-se.</span>
-                </main>
+                    <div className="input-block">
+                        <label htmlFor="password">Senha</label>
+                        <input type="password" name="password" className="insert-password" />
+                    </div>
 
-            </div>
+                    <Link to="/recomendation" className="btn-login">Entrar</Link>
+
+
+
+                </form>
+            </main>
+
+
         </div>
     )
 }
