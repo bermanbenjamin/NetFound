@@ -1,39 +1,65 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { FormEvent, useState } from "react";
+import { useHistory } from "react-router";
+import { useForm } from "react-hook-form";
+import Logo from "../components/Logo/Logo";
+import api from "../../services/api";
 
-import Logo from '../components/Logo/Logo';
+import "./login.css";
 
+type User = {
+  user: string;
+  password: string;
+};
 
 function Login() {
-    return (
-        <div id="page-background">
+  const { register, handleSubmit } = useForm<User>();
 
-            <main>
-                <Logo />
+  let history = useHistory();
 
-                <form action="" className="insert-login-form">
-                    <h1>Entrar</h1>
+  const onSubmit = handleSubmit((data) => {
+    const body = {
+      username: data.user,
+      password: data.password,
+    };
 
-                    <div className="input-block">
-                        <label htmlFor="email">Email</label>
-                        <input type="text" name="email" className="insert-email" />
-                    </div>
+    console.log(body);
 
-                    <div className="input-block">
-                        <label htmlFor="password">Senha</label>
-                        <input type="password" name="password" className="insert-password" />
-                    </div>
+    api
+      .post("/services/sign-in", body)
+      .then((response) => history.push("/quests"));
+  });
 
-                    <Link to="/recomendation" className="btn-login">Entrar</Link>
+  return (
+    <div id="page-background">
+      <main>
+        <Logo />
 
+        <div className="background-form-login">
+          <form onSubmit={onSubmit} className="insert-login-form">
+            <h1>Entrar</h1>
 
+            <input
+              ref={register({ required: true })}
+              id="user"
+              name="user"
+              type="text"
+              placeholder="Usuário"
+            />
 
-                </form>
-            </main>
+            <input
+              ref={register({ required: true })}
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Senha"
+            />
 
-
+            <button type="submit">Entrar</button>
+          </form>
         </div>
-    )
+      </main>
+    </div>
+  );
 }
 
 export default Login;

@@ -4,36 +4,42 @@
   background: url(../../assets/background.svg) no-repeat;
 }
 
+img {
+  padding-top: 15vh;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 4vw;
-  width: 65vw;
+  font-size: 6vh;
+  font-weight: 500;
 }
 
 span {
   padding-top: 3vh;
-  font-size: 2vw;
+  font-size: 4vh;
   font-weight: 300;
   width: 40vw;
   text-align: center;
 }
 
 .content {
+  height: 90vh;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .enter-app {
-  margin-top: 14vh;
-  width: 20vw;
-  height: 8vh;
+  width: 15vw;
+  height: 7vh;
   background: #f0111f;
   border-radius: 8px;
   display: flex;
@@ -43,8 +49,8 @@ span {
 
 .enter-app .text-button span {
   text-align: center;
-  font-size: 1.6vw;
-  font-weight: 700;
+  font-size: 2vh;
+  font-weight: 500;
   color: #fff;
   text-decoration: none;
 }

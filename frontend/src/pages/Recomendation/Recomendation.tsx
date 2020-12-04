@@ -1,44 +1,48 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import Logo from "../components/Logo/Logo";
+import "./recomendation.css";
+
+function Recomenation(props: any) {
+  let movieTitle = localStorage.getItem('movieTitle');
+  let movieDescription = localStorage.getItem('movieDescription');
+  let movieDirector = localStorage.getItem('movieDirector');
+  let movieGenre = localStorage.getItem('movieGenre');
+  let movieImage = localStorage.getItem('movieImage');
+  let movieDate = localStorage.getItem('movieDate');
 
 
-function Recomenation() {
+
   return (
     <div id="page-background">
-      <Logo />
+      <main>
+        <div className="recomendation">
+          <img
+            src={movieImage ? movieImage : ''}
+            alt="banner image"
+            className="poster"
+          />
+          <section className="info">
+            <h1>{movieTitle}</h1>
 
-      <div className="content">
-        <main>
-          <h1>Perguntas</h1>
-          <span>Aqui você deve colocar inserir informações<br />importantes para defirnmos padrão</span>
-
-          <form action="" className="insert-ask-form" >
-
-            <div className="input-block">
-              <input type="text" name="email" className="" />
+            <p>
+              {
+                movieDescription
+              }
+            </p>
+            <div>
+              <span>{`Dirigido Por ${movieDirector}`}</span>
+              <br />
+              <br />
+              <span>{`Lançamento: ${movieDate}`}</span>
             </div>
-
-            <div className="input-block">
-              <input type="text" name="email" className="" />
-            </div>
-
-            <div className="input-block">
-              <input type="text" name="email" className="" />
-            </div>
-
-            <div className="input-block">
-              <input type="text" name="email" className="" />
-            </div>
-
-            <Link to="" className="btn-login">Avançar</Link>
-          </form>
-        </main>
-
-      </div>
+          </section>
+        </div>
+        <Link to="/quests">
+          <button>Nova Sugestão</button>
+        </Link>
+      </main>
     </div>
-
   );
 }
 

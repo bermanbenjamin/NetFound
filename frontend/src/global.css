@@ -11,6 +11,7 @@
 body {
   width: 100vw;  
   height: 100vh;
+  overflow: hidden;
   color: #ffffff;
   background: black;
 }
@@ -21,6 +22,25 @@ button,
 textarea, a {
   font: 600 1vw Roboto, sans-serif;
   text-decoration: none;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  color: white;
+  padding-left: 2vh;
+  background-color: #333333;
+  height: 6vh;
+  width: 80%;
+}
+
+button {
+  background-color: #FF0010;
+  color: white;
+  height: 6vh;
 }
 
 :root {

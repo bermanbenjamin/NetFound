@@ -9,9 +9,9 @@ function Home() {
   return (
     <div id="page-background">
       <main>
+        <div className="content">
         <Logo />
 
-        <div className="content">
           <h1>Tá cansado de assistir os mesmos filmes e séries né?</h1>
           <span>
             Ache as melhores programações pro estilo que combina com você!
